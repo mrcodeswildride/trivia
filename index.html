@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>Trivia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>Trivia</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>Trivia</h1>
 
-	</script>
-</head>
+    <p id="questionParagraph">
+      In JavaScript, what is the method name for getting an element by its ID?
+    </p>
 
-<body>
-	<h1>Trivia</h1>
+    <input type="text" placeholder="answer" autocomplete="off" id="answer" />
+    <button id="submitButton">Submit</button>
 
-	<p id="questionParagraph">
-		In JavaScript, what is the method name for getting an element by its ID?
-	</p>
-
-	<input type="text" placeholder="answer" id="answer">
-  <button id="submitButton">Submit</button>
-
-  <p id="resultParagraph"></p>
-  <button id="nextButton">Next question</button>
-</body>
-
+    <p id="resultParagraph"></p>
+    <button id="nextButton">Next question</button>
+  </body>
 </html>

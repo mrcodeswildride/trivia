@@ -10,6 +10,8 @@ let numCorrect = 0
 submitButton.addEventListener(`click`, submit)
 nextButton.addEventListener(`click`, next)
 
+answer.focus()
+
 function submit() {
   let answerValue = answer.value.trim()
 
@@ -17,44 +19,35 @@ function submit() {
     if (answerValue == `getElementById`) {
       resultParagraph.innerHTML = `Correct.`
       numCorrect = numCorrect + 1
-    }
-    else {
+    } else {
       resultParagraph.innerHTML = `Incorrect. The answer is getElementById.`
     }
-  }
-  else if (questionNumber == 2) {
+  } else if (questionNumber == 2) {
     if (answerValue == `addEventListener`) {
       resultParagraph.innerHTML = `Correct.`
       numCorrect = numCorrect + 1
-    }
-    else {
+    } else {
       resultParagraph.innerHTML = `Incorrect. The answer is addEventListener.`
     }
-  }
-  else if (questionNumber == 3) {
+  } else if (questionNumber == 3) {
     if (answerValue == `innerHTML`) {
       resultParagraph.innerHTML = `Correct.`
       numCorrect = numCorrect + 1
-    }
-    else {
+    } else {
       resultParagraph.innerHTML = `Incorrect. The answer is innerHTML.`
     }
-  }
-  else if (questionNumber == 4) {
+  } else if (questionNumber == 4) {
     if (answerValue == `value`) {
       resultParagraph.innerHTML = `Correct.`
       numCorrect = numCorrect + 1
-    }
-    else {
+    } else {
       resultParagraph.innerHTML = `Incorrect. The answer is value.`
     }
-  }
-  else if (questionNumber == 5) {
+  } else if (questionNumber == 5) {
     if (answerValue == `style`) {
       resultParagraph.innerHTML = `Correct.`
       numCorrect = numCorrect + 1
-    }
-    else {
+    } else {
       resultParagraph.innerHTML = `Incorrect. The answer is style.`
     }
 
@@ -71,17 +64,13 @@ function next() {
 
   if (questionNumber == 2) {
     questionParagraph.innerHTML = `In JavaScript, what is the method name for making an element listen for an event?`
-  }
-  else if (questionNumber == 3) {
+  } else if (questionNumber == 3) {
     questionParagraph.innerHTML = `In JavaScript, what is the property name for setting the HTML inside of an element?`
-  }
-  else if (questionNumber == 4) {
+  } else if (questionNumber == 4) {
     questionParagraph.innerHTML = `In JavaScript, what is the property name for getting what the user inputted?`
-  }
-  else if (questionNumber == 5) {
+  } else if (questionNumber == 5) {
     questionParagraph.innerHTML = `In JavaScript, what is the property name for setting the CSS of an element?`
-  }
-  else if (questionNumber == 6) {
+  } else if (questionNumber == 6) {
     let score = (numCorrect / 5) * 100
     questionParagraph.innerHTML = `You answered ${numCorrect} out of 5 questions correctly. Your score is ${score}%.`
 
@@ -94,4 +83,6 @@ function next() {
   submitButton.disabled = false
   resultParagraph.innerHTML = ``
   nextButton.style.display = `none`
+
+  answer.focus()
 }
